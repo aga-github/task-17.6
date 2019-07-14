@@ -1,0 +1,13 @@
+
+doctype html
+html
+	head
+		title Hello
+		link(rel="stylesheet", type="text/css", href="/static/style.css")
+	body
+		div.container
+			if(user)
+				h2.user-name Hello, #{user.firstName} #{user.lastName}
+				h3 Good to see you!
+			else 
+				a.welcome-btn(href="/auth/google") Log in!
